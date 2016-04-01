@@ -1,0 +1,17 @@
+{
+  "name": "test_webpack",
+  "version": "1.0.0",
+  "description": "A test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrei Casuneanu",
+  "license": "ISC",
+  "devDependencies": {
+    "imports-loader": "^0.6.5",
+    "jquery": "^2.2.2",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
