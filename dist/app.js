@@ -74,7 +74,7 @@ webpackJsonp([0],[
 
 	  var $ = __webpack_require__(3);
 	  var button2 =  {};
-	  __webpack_require__(6);
+	  // require("./button2.scss");
 	  // require style here: button2.scss
 
 	  button2.initialize = function() {
@@ -87,12 +87,6 @@ webpackJsonp([0],[
 	  return button2; 
 	})();
 
-
-/***/ },
-/* 6 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
 
 /***/ }
 ]);

@@ -3,7 +3,7 @@ module.exports = (function() {
 
   var $ = require('jquery');
   var button2 =  {};
-  require("./button2.scss");
+  // require("./button2.scss");
   // require style here: button2.scss
 
   button2.initialize = function() {
