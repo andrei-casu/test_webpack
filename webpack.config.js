@@ -26,6 +26,10 @@ module.exports = {
                 test: /\.less$/,
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
             },
+            {
+                test: /\.(jpe?g|png|gif)$/i,
+                loader:'file'
+            },
             { test: /bootstrap\/js\//, loader: 'imports?jQuery=jquery' },
 
               // Needed for the css-loader when [bootstrap-webpack](https://github.com/bline/bootstrap-webpack)
