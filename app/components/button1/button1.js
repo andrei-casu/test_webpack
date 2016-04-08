@@ -8,6 +8,7 @@ module.exports = (function() {
 
   button1.initialize = function() {
     $('body').append('<button id="button1" class="btn btn-primary">Button 1</button>');
+    $('#button1').addClass('fat');
     $('#button1').click(function() {
       alert('button 1');
     });
