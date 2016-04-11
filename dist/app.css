@@ -1,6 +1,5 @@
-.btn.btn-danger {
-  height: 400px; }
-
 .btn.btn-primary {
   width: 400px;
-  color: red; }
+  color: black; }
+.btn.btn-danger {
+  height: 400px; }
