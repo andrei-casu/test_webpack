@@ -13,7 +13,7 @@ var path = require('path');
 module.exports = {
     // target: 'node', // in order to ignore built-in modules like path, fs, etc. 
     // externals: [nodeExternals()],//ignore from bundle external libraries
-    target: 'web',
+    // target: 'web',
     entry: {
         app: "./app",
         vendor: ["jquery", "bootstrap"]
@@ -50,7 +50,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("app.css", {allChunks: true}),
+        new ExtractTextPlugin("app.css", {allChunks: false}),
         // new webpack.optimize.CommonsChunkPlugin("bootstrap", "vendor.css"),
         new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.js"),
         new webpack.ProvidePlugin({
