@@ -6,7 +6,6 @@ module.exports = {
     target: 'web',
     entry: {
         app: path.join(__dirname, "app"),
-        // lib: ,
         vendor: ["jquery", "bootstrap", path.join(__dirname, "lib")]
     },
     output: {
