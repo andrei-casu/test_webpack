@@ -1,11 +1,19 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var webpack = require('webpack');
+var path = require('path');
 // var nodeExternals = require('webpack-node-externals');
+// var bootstrapPath = path.join(
+//     __dirname,
+//     'node_modules/bootstrap/dist/css'
+// );
+
+// console.log(bootstrapPath);
 
 
 module.exports = {
     // target: 'node', // in order to ignore built-in modules like path, fs, etc. 
     // externals: [nodeExternals()],//ignore from bundle external libraries
+    target: 'web',
     entry: {
         app: "./app",
         vendor: ["jquery", "bootstrap"]
@@ -17,7 +25,8 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" },
+            { test: /\.css$/, loader: "style-loader!css-loader" },
+            // { test: /\.css$/, loader: "style!css" },
             {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!sass-loader")
@@ -42,8 +51,17 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin("app.css", {allChunks: true}),
-        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.js")
+        // new webpack.optimize.CommonsChunkPlugin("bootstrap", "vendor.css"),
+        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.js"),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
     ]//,
+    // resolve: {
+    //     // modulesDirectories: [bootstrapPath]
+    // }//,
     // externals: {
     //     "jquery": "jquery"
     // }

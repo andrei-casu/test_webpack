@@ -3,10 +3,9 @@ module.exports = (function() {
 
   var button1 = require('./../button1/button1.js');
   var button2 = require('./../button2/button2.js');
-  // require("./../../node_mudules/bootstrap/dist/css/bootstrap.min.css");
-  // require("./../../node_mudules/bootstrap/dist/js/bootstrap.min.js");
   // import bootstrap here
-  require("bootstrap-webpack");
+  require('../../../node_modules/bootstrap/dist/js/bootstrap.min.js');
+  require('../../../node_modules/bootstrap/dist/css/bootstrap.min.css');
 
   var app = {};
 

@@ -1,7 +1,7 @@
 module.exports = (function() {
   'use strict';
 
-  var $ = require('jquery');
+  // var $ = require('jquery');
   var button1 =  {};
   require("./button1.scss");
   // require style here: button1.scss
