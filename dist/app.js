@@ -18,10 +18,10 @@ webpackJsonp([0],[
 	module.exports = (function() {
 	  'use strict';
 
-	  __webpack_require__(2);
+	  // require('../../../node_modules/bootstrap/dist/css/bootstrap.css');
 
-	  var button1 = __webpack_require__(3);
-	  var button2 = __webpack_require__(6);
+	  var button1 = __webpack_require__(2);
+	  var button2 = __webpack_require__(8);
 
 	  var app = {};
 
@@ -36,19 +36,13 @@ webpackJsonp([0],[
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {module.exports = (function() {
 	  'use strict';
 
 	  var button1 =  {};
-	  __webpack_require__(5);
+	  __webpack_require__(4);
 
 	  button1.initialize = function() {
 	    $('body').prepend('<button id="button1" class="btn btn-primary">Button 1</button>');
@@ -61,24 +55,27 @@ webpackJsonp([0],[
 	  return button1; 
 	})();
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 4 */,
-/* 5 */
+/* 3 */,
+/* 4 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 6 */
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {module.exports = (function() {
 	  'use strict';
 
 	  var button2 =  {};
-	  __webpack_require__(7);
+	  __webpack_require__(9);
 
 	  button2.initialize = function() {
 	    $('body').prepend('<button id="button2" class="btn btn-danger">Button 2</button>');
@@ -90,10 +87,10 @@ webpackJsonp([0],[
 	  return button2; 
 	})();
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 7 */
+/* 9 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

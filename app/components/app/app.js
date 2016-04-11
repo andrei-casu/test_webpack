@@ -1,7 +1,7 @@
 module.exports = (function() {
   'use strict';
 
-  require('../../../node_modules/bootstrap/dist/css/bootstrap.min.css');
+  // require('../../../node_modules/bootstrap/dist/css/bootstrap.css');
 
   var button1 = require('./../button1/button1');
   var button2 = require('./../button2/button2');

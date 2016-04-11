@@ -5,8 +5,9 @@ var path = require('path');
 module.exports = {
     target: 'web',
     entry: {
-        app: "./app",
-        vendor: ["jquery", "bootstrap"]
+        app: path.join(__dirname, "app"),
+        // lib: ,
+        vendor: ["jquery", "bootstrap", path.join(__dirname, "lib")]
     },
     output: {
         path: "./dist",
@@ -33,7 +34,8 @@ module.exports = {
     },
     
     plugins: [
-        new ExtractTextPlugin("app.css", {allChunks: true}),
+        // new ExtractTextPlugin("app.css", {allChunks: false}),
+        new ExtractTextPlugin("[name].css"),
         //new webpack.optimize.CommonsChunkPlugin("bootstrap", "vendor.css"),
         new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.js"),
         new webpack.ProvidePlugin({
