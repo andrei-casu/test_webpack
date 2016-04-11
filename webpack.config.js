@@ -6,7 +6,7 @@ module.exports = {
     target: 'web',
     entry: {
         app: path.join(__dirname, "app"),
-        vendor: ["jquery", "bootstrap", path.join(__dirname, "lib")]
+        vendor: ["jquery", "bootstrap", path.join(__dirname, "app/components/shared/vendor.js")]
     },
     output: {
         path: "./dist",
