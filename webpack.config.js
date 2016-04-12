@@ -5,8 +5,8 @@ var path = require('path');
 module.exports = {
     target: 'web',
     entry: {
-        app: path.join(__dirname, "app"),
-        vendor: ["jquery", "bootstrap", path.join(__dirname, "app/components/shared/vendor.js")]
+        app: [/*path.join(__dirname, "app"),*/ path.join(__dirname, "app/index.jsx")],
+        vendor: ["jquery", "bootstrap", path.join(__dirname, "app/components/shared/vendor.js"), "react", "react-dom"]
     },
     output: {
         path: "./dist",
@@ -15,7 +15,6 @@ module.exports = {
     },
     module: {
         loaders: [
-            // { test: /\.css$/, loader: "style-loader!css-loader" },
             { test: /\.css$/,
               loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader") },
             { test: /\.scss$/,
@@ -28,7 +27,18 @@ module.exports = {
             { test: /\.(woff|woff2)$/, loader: "url?limit=10000&minetype=application/font-woff" },
             { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream" },
             { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
-            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" }
+            { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml" },
+            {
+                test: /\.js?$/,
+                // loaders: ['babel?cacheDirectory,presets[]=es2015'],
+                loaders: ['babel?cacheDirectory,presets[]=react,presets[]=es2015,presets[]=survivejs-kanban'],//only if react is used with js and not jsx
+                include: path.join(__dirname, "app")
+            },
+            {
+                test: /\.jsx?$/,
+                loaders: ['babel?cacheDirectory,presets[]=react,presets[]=es2015,presets[]=survivejs-kanban'],
+                include: path.join(__dirname, "app")
+            }
         ]
     },
     
